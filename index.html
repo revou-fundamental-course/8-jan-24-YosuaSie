@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Kalkulator Matematik</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+    <!-- div pertama, untuk container judul web -->
+    <div class="text-center"> 
+        <p class="header"><span class="header-text1">Katik</span> <span class="header-text2">- Kalkulator Matematik</span></p>
+    </div>
+
+    <!-- div kedua, untuk container isi -->
+    <div class="container">
+        <!-- Pilih hitung luas/keliling -->
+        <div class="text-center">
+            <h1>Welcome to Katik</h1>
+            <p>Hai Sobat, Selamat datang di Katik :]</p>
+            <p>Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</p>
+            <div><button type="button" class="button" id="btnLuas" onclick="clickLuas()">Hitung Luas</button></div>
+            <div><button type="button" class="button" id="btnKeliling" onclick="clickKeliling()">Hitung Keliling</button></div>
+        </div>
+
+        <!-- hitung luas -->
+        <div id="hitungLuas" class="container-hitung" hidden>
+            <div class="header-container text-center">
+                <h1>Luas Persegi</h1>
+            </div>
+            <div class="text-center">
+                <img src="img/rectangle.png">
+                <p><b>Gambar Bujur Sangkar</b></p>
+            </div>
+            <div class="container-rumus">
+                <p>Rumus Luas Persegi yaitu:</p>
+                <h2 class="text-center">L = S x S</h2>
+                <p>Di mana:</p>
+                <p>L = Luas</p>
+                <p>S = Sisi</p>
+            </div>
+            <div class="text-center container-input">
+                <h1>Hitung Luas Persegi</h1>
+                <input type="number" id="inputSisiLuas" class="input-hitung" placeholder="Input Nilai Sisi">
+                <div id="hasilLuas" class="text-left">
+                    <!-- isi javascript hasil hitung luas -->
+                </div>
+                <br><button type="button" id="btnHitungLuas" class="button-hitung" onclick="hitungLuas()">Hitung</button>
+            </div>
+            <br><br>
+            <div class="text-right">
+                <button type="button" class="button-reset" onclick="resetLuas()">Reset</button>
+            </div>
+        </div>
+
+        <!-- hitung keliling -->
+        <div id="hitungKeliling" class="container-hitung" hidden>
+            <div class="header-container text-center">
+                <h1>Keliling Persegi</h1>
+            </div>
+            <div class="text-center">
+                <img src="img/rectangle.png">
+                <p><b>Gambar Bujur Sangkar</b></p>
+            </div>
+            <div class="container-rumus">
+                <p>Rumus Keliling Persegi yaitu:</p>
+                <h2 class="text-center">K = 4 x S</h2>
+                <p>Di mana:</p>
+                <p>K = Keliling</p>
+                <p>S = Sisi</p>
+            </div>
+            <div class="text-center container-input">
+                <h1>Hitung Keliling Persegi</h1>
+                <input type="number" id="inputSisiKeliling" class="input-hitung" placeholder="Input Nilai Sisi">
+                <div id="hasilKeliling" class="text-left">
+                    <!-- isi javascript hasil hitung keliling -->
+                </div>
+                <br><button type="button" id="btnHitungKeliling" class="button-hitung" onclick="hitungKeliling()">Hitung</button>
+            </div>
+            <br><br>
+            <div class="text-right">
+                <button type="button" class="button-reset" onclick="resetKeliling()">Reset</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
